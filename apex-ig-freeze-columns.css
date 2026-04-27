@@ -1,0 +1,48 @@
+/* Keep IG scroll container scrollable */
+#emp_grid .a-GV-w-scrollX {
+  overflow-x: auto !important;
+}
+
+/* Frozen header cells stay above scroll */
+#emp_grid .a-GV-thead {
+  position: sticky;
+  top: 0;
+  z-index: 30;
+}
+
+/* Zebra stripe color for frozen body cells (even rows) - Pastel Green */
+#emp_grid .a-GV-table tbody tr:nth-child(even) td[style*="sticky"] {
+  background: #d8f3dc !important;   /* Pastel Green */
+  color: #1b5e20 !important;        /* Dark Green Text */
+}
+
+/* Frozen columns (all rows) - apply text color */
+#emp_grid .a-GV-table tbody td[style*="sticky"] {
+  color: #1b5e20 !important;        /* Dark Green */
+}
+
+/* Optional: Frozen header background */
+#emp_grid .a-GV-header td[style*="sticky"] {
+  background: #b7e4c7 !important;   /* Slightly darker pastel green */
+  color: #1b5e20 !important;
+}
+
+/* Remove default blue header completely */
+#emp_grid .a-GV-thead th {
+  background: #b7e4c7 !important;   /* Pastel Green */
+  color: #1b5e20 !important;        /* Dark Green */
+  border-color: #95d5b2 !important;
+}
+
+/* If APEX applies selection/active column blue */
+#emp_grid .a-GV-header .is-active,
+#emp_grid .a-GV-header .is-focused {
+  background: #95d5b2 !important;
+  color: #1b5e20 !important;
+}
+
+/* Frozen header columns (extra safety) */
+#emp_grid th[style*="sticky"] {
+  background: #b7e4c7 !important;
+  color: #1b5e20 !important;
+}
